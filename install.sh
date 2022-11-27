@@ -23,5 +23,5 @@ sudo cp conf-and-webapps-file/context.xml /opt/tomcat/webapps/manager/META-INF/
 sudo rm -rf /opt/tomcat/webapps/host-manager/META-INF/context.xml
 sudo cp conf-and-webapps-file/contexthm.xml /opt/tomcat/webapps/host-manager/META-INF/
 sudo sh /opt/tomcat/bin/shutdown.sh
-sleep 2
+sleep 3
 sudo sh /opt/tomcat/bin/startup.sh
