@@ -1,0 +1,14 @@
+# 2 code approvers required for merging feature branches into develop
+/feature/* @approver1 @approver2
+
+# Merge into master from develop after approver approves
+/develop/* @approver
+
+# After code review, develop branch deployment from feature branch
+/develop/* @code_reviewer @deployer
+
+# UAT deployment from develop branch
+/uat/* @uat_deployer
+
+# After QA sign-off, develop branch will be merged into master
+/develop/* @qa_signoff @merge_approver
