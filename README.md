@@ -50,3 +50,11 @@ pipeline {
     }
   }
 }
+
+def maven_settings_xml = readFile "${env.JENKINS_HOME}/maven-settings.xml"
+
+
+withSonarQubeEnv('my-sonarqube-server') {
+    sh "mvn sonar:sonar -s $maven_settings_xml"
+}
+
